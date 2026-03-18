@@ -1,5 +1,8 @@
 package com.guanwx;
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
 /**
  * @Author: guanwx
  * @CreateTime: 2026/2/12 星期四 2:01
@@ -7,13 +10,11 @@ package com.guanwx;
  * @Version: 1.0
  */
 
+@SpringBootApplication
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println("\nHello and welcome!\n");
+        SpringApplication.run(Main.class, args);
 
-        for (int i = 1; i <= 5; i++) {
-            System.out.println("\ti = " + i);
-        }
     }
 }

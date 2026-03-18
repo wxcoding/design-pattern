@@ -1,4 +1,4 @@
-package com.guanwx.singleton;
+package com.guanwx.creational.singleton;
 
 /**
  * @Author: guanwx
@@ -9,17 +9,17 @@ package com.guanwx.singleton;
 
 public class LazyMan {
 
-    // volatile + DCL双重锁
+    // volatile(保证原子性) + DCL双重锁
     private volatile static LazyMan lazyMan;
 
     private LazyMan() {}
 
     // DCL双重锁保证安全
-    private static LazyMan getLazyMan(){
+    private static LazyMan getInstance(){
         if (lazyMan == null){
             synchronized (LazyMan.class){
                 if (lazyMan == null)
-                    lazyMan = new LazyMan();
+                    lazyMan = new LazyMan(); // 分配内存空间 -> 执行构造方法，初始化对象 -> 把这个对象指向这个空间
             }
         }
         return lazyMan;
@@ -27,5 +27,5 @@ public class LazyMan {
 
 }
 
-// todo 枚举自带单例模式 enum
+// todo 枚举自带单例模式 enum（反射不能破坏枚举自带单例模式）
 

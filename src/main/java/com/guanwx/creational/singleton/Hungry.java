@@ -1,4 +1,4 @@
-package com.guanwx.singleton;
+package com.guanwx.creational.singleton;
 
 /**
  * @Author: guanwx
@@ -13,7 +13,8 @@ public class Hungry {
 
     private Hungry() {}
 
-    private static Hungry getHungry(){
+    private static Hungry getInstance(){
         return hungry;
     }
+
 }
