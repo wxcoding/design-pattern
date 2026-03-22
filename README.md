@@ -7,8 +7,8 @@
 * 迪米特法则：只与你的直接朋友交谈，不跟“陌生人”说话。
 * 合成复用原则：尽量先使用组合或者聚合等关联关系来实现，其次才考虑使用继承关系来实现。
 ## 创建型模式（creational）- 5个:
-* 单例模式（singleton）：核心思想是保证一个类在整个应用生命周期内仅有一个实例，并提供全局唯一的访问入口。通过私有化构造器、控制实例创建逻辑（如懒汉式、饿汉式），避免重复创建对象，节省内存资源，适用于全局共享的资源（如配置中心、连接池）
-  [coding](https://github.com/wxcoding/design-pattern/tree/master/src/main/java/com/guanwx/creational/builder)
+* 单例模式（singleton）：核心思想是保证一个类在整个应用生命周期内仅有一个实例，并提供全局唯一的访问入口。通过私有化构造器、控制实例创建逻辑（如懒汉式、饿汉式），避免重复创建对象，节省内存资源，适用于全局共享的资源（如配置中心、连接池）。
+[coding](https://github.com/wxcoding/design-pattern/tree/master/src/main/java/com/guanwx/creational/builder)
 * 工厂模式（factory）：广义工厂模式的核心思想是将对象的创建逻辑从客户端代码中抽离，交由专门的工厂类负责，客户端无需关注对象的具体创建细节（如初始化参数、依赖注入），仅通过工厂获取对象，降低对象创建与使用的耦合度。
   * 简单工厂模式（simple）：核心思想是通过一个统一的工厂类，根据客户端传入的标识参数，动态决定创建哪一种产品类的实例。将对象创建集中管理，简化客户端调用，但新增产品需修改工厂类，违背 “开闭原则”，是工厂模式的简化版。[coding](https://github.com/wxcoding/design-pattern/tree/master/src/main/java/com/guanwx/creational/builder)
   * 方法工厂模式（method）：核心思想是定义一个创建对象的抽象工厂接口 / 类，将具体产品的创建逻辑延迟到子类实现。每个子类工厂对应一种产品的创建，新增产品只需新增子类工厂，符合 “开闭原则”，解决简单工厂模式的扩展性问题。[coding](https://github.com/wxcoding/design-pattern/tree/master/src/main/java/com/guanwx/creational/builder)
