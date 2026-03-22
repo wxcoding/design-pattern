@@ -29,7 +29,7 @@
   * [coding](https://github.com/wxcoding/design-pattern/tree/master/src/main/java/com/guanwx/creational/builder)
 * 桥接模式（bridge）：核心思想是将抽象层与实现层分离，拆分为两个独立的继承体系，通过组合而非继承连接两者。避免多层继承导致的类爆炸（如 “形状 + 颜色” 场景：抽象形状类持有颜色实现类引用，形状和颜色可独立扩展），提升扩展性。
 * [coding](https://github.com/wxcoding/design-pattern/tree/master/src/main/java/com/guanwx/creational/builder)
-* 装饰模式（decorator）5：核心思想是动态地给对象添加额外职责，通过包装（装饰）目标对象，在不修改原对象代码的前提下逐层增强功能。符合 “开闭原则”，如 Java IO 的BufferedReader装饰FileReader添加缓冲功能，DataInputStream装饰FileInputStream添加数据读取功能。
+* 装饰模式（decorator）：核心思想是动态地给对象添加额外职责，通过包装（装饰）目标对象，在不修改原对象代码的前提下逐层增强功能。符合 “开闭原则”，如 Java IO 的BufferedReader装饰FileReader添加缓冲功能，DataInputStream装饰FileInputStream添加数据读取功能。
 * [coding](https://github.com/wxcoding/design-pattern/tree/master/src/main/java/com/guanwx/creational/builder)
 * 组合模式（composite）：核心思想是将对象组合成树形结构，表示 “部分 - 整体” 的层次关系，使客户端对单个对象（叶子节点）和组合对象（容器节点）的操作保持一致。无需区分 “单个元素” 和 “元素集合”，如文件系统中，文件（叶子）和文件夹（容器）均可执行 “删除”“计算大小” 操作。
 * [coding](https://github.com/wxcoding/design-pattern/tree/master/src/main/java/com/guanwx/creational/builder)
@@ -52,7 +52,7 @@
 * [coding](https://github.com/wxcoding/design-pattern/tree/master/src/main/java/com/guanwx/creational/builder)
 * 迭代器模式（iterator）：核心思想是提供一种统一的方式顺序访问聚合对象的元素，而不暴露聚合对象的内部结构。将遍历逻辑从聚合对象中抽离，客户端通过迭代器接口遍历 List、Set 等不同结构的集合，无需关注底层实现。
 * [coding](https://github.com/wxcoding/design-pattern/tree/master/src/main/java/com/guanwx/creational/builder)
-* 观察者模式（oberserver）8：核心思想是定义一对多的依赖关系，当主题（被观察对象）状态变化时，所有依赖它的观察者自动收到通知并更新。实现对象间的松耦合，主题无需知道观察者的具体逻辑，如 GUI 事件监听、Spring 事件机制。
+* 观察者模式（oberserver）：核心思想是定义一对多的依赖关系，当主题（被观察对象）状态变化时，所有依赖它的观察者自动收到通知并更新。实现对象间的松耦合，主题无需知道观察者的具体逻辑，如 GUI 事件监听、Spring 事件机制。
 * [coding](https://github.com/wxcoding/design-pattern/tree/master/src/main/java/com/guanwx/creational/builder)
 * 中介者模式（mediator）：核心思想是用一个中介对象封装多个对象之间的交互，使对象无需直接引用彼此，降低耦合度。将多对象的网状依赖转为中介者与对象的星型依赖，如聊天室中介转发用户消息，用户无需直接通信。
 * [coding](https://github.com/wxcoding/design-pattern/tree/master/src/main/java/com/guanwx/creational/builder)
@@ -62,7 +62,7 @@
 * [coding](https://github.com/wxcoding/design-pattern/tree/master/src/main/java/com/guanwx/creational/builder)
 * 状态模式（state）9：核心思想是将对象的不同状态封装为独立的状态类，对象的行为随状态变化而改变，状态切换由状态类管理。替代大量的if-else状态判断，使状态逻辑更清晰，如订单的 “待支付、已支付、已取消” 状态封装为不同类。
 * [coding](https://github.com/wxcoding/design-pattern/tree/master/src/main/java/com/guanwx/creational/builder)
-* 策略模式（stratgy）10：核心思想是定义一系列算法，将每个算法封装为独立的策略类，使算法可互相替换，且算法变化不影响使用算法的客户端。解耦算法定义与使用，如排序算法（冒泡、快排）封装为不同策略，客户端可灵活切换。
+* 策略模式（stratgy）：核心思想是定义一系列算法，将每个算法封装为独立的策略类，使算法可互相替换，且算法变化不影响使用算法的客户端。解耦算法定义与使用，如排序算法（冒泡、快排）封装为不同策略，客户端可灵活切换。
 * [coding](https://github.com/wxcoding/design-pattern/tree/master/src/main/java/com/guanwx/creational/builder)
 * 职责链模式（Chain of Responsibility）11：核心思想是将请求的处理者连成一条链，请求沿链传递，直到有处理者处理该请求。每个处理者只需关注自己负责的请求范围，无需知道链的整体结构，如权限校验链、日志处理链、SpringMVC 的拦截器链。
 * [coding](https://github.com/wxcoding/design-pattern/tree/master/src/main/java/com/guanwx/creational/builder)
