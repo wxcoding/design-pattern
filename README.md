@@ -6,7 +6,7 @@
 * 接口隔离原则：要为各个类建立它们需要的专用接口。
 * 迪米特法则：只与你的直接朋友交谈，不跟“陌生人”说话。
 * 合成复用原则：尽量先使用组合或者聚合等关联关系来实现，其次才考虑使用继承关系来实现。
-## 创建型模式（creational）- 5:
+## 创建型模式（creational）- 5个:
 * 单例模式（singleton）：核心思想是保证一个类在整个应用生命周期内仅有一个实例，并提供全局唯一的访问入口。通过私有化构造器、控制实例创建逻辑（如懒汉式、饿汉式），避免重复创建对象，节省内存资源，适用于全局共享的资源（如配置中心、连接池）。[coding](https://github.com/wxcoding/design-pattern/tree/master/src/main/java/com/guanwx/creational/builder)
 * 工厂模式（factory）：广义工厂模式的核心思想是将对象的创建逻辑从客户端代码中抽离，交由专门的工厂类负责，客户端无需关注对象的具体创建细节（如初始化参数、依赖注入），仅通过工厂获取对象，降低对象创建与使用的耦合度。
   * 简单工厂模式（simple）：核心思想是通过一个统一的工厂类，根据客户端传入的标识参数，动态决定创建哪一种产品类的实例。将对象创建集中管理，简化客户端调用，但新增产品需修改工厂类，违背 “开闭原则”，是工厂模式的简化版。[coding](https://github.com/wxcoding/design-pattern/tree/master/src/main/java/com/guanwx/creational/builder)
@@ -14,7 +14,7 @@
 * 抽象工厂模式（abstract）：核心思想是提供一个创建一系列相关 / 依赖对象的抽象接口，无需指定具体类。围绕 “产品族” 设计（如 “华为工厂” 生产华为手机、华为平板，“苹果工厂” 生产苹果手机、苹果平板），保证同一产品族的对象兼容，提升产品族创建的一致性。[coding](https://github.com/wxcoding/design-pattern/tree/master/src/main/java/com/guanwx/creational/builder)
 * 建造者模式（builder）：核心思想是将复杂对象的构建过程与表示分离，把对象的属性赋值、组装等复杂步骤拆分为多个简单步骤，由建造者类分步构建，指挥者类控制构建顺序。客户端只需指定建造者即可获取定制化的复杂对象（如构建订单、文档），避免多参数构造器的混乱。[coding](https://github.com/wxcoding/design-pattern/tree/master/src/main/java/com/guanwx/creational/builder)
 * 原型模式（prototype）：核心思想是通过克隆已有实例（原型） 创建新对象，而非通过new关键字初始化。将对象创建方式从 “构造初始化” 改为 “拷贝复用”，避免重复执行复杂的初始化逻辑，提升创建效率，适用于创建成本高的大对象（如缓存对象、复杂配置对象）。[coding](https://github.com/wxcoding/design-pattern/tree/master/src/main/java/com/guanwx/creational/builder)
-## 结构型模式（structural）- 7:
+## 结构型模式（structural）- 7个:
 * 适配器模式（adapter）：核心思想是将一个类的接口转换为客户端期望的另一种接口，解决因接口不兼容导致的类无法协同工作的问题，像 “电源适配器” 一样适配不同接口，保证功能复用。 
   * 类适配器：适配器模式的一种实现，核心思想是通过继承目标类 + 实现客户端期望接口，完成接口适配。因继承单一目标类，适配范围受限（Java 单继承），耦合度较高。[coding](https://github.com/wxcoding/design-pattern/tree/master/src/main/java/com/guanwx/creational/builder)
   * 对象适配器：适配器模式的主流实现，核心思想是通过组合（持有目标对象引用）+ 实现客户端期望接口，完成接口适配。避免继承限制，适配灵活，耦合度更低，符合 “合成复用原则”。[coding](https://github.com/wxcoding/design-pattern/tree/master/src/main/java/com/guanwx/creational/builder)
@@ -29,7 +29,7 @@
   * 动态代理：核心思想是在运行时动态生成代理类，无需手动编写代理代码，提升复用性。根据实现方式分为 JDK 动态代理和 CGLIB 动态代理。 
     * Jdk：基于接口的动态代理，核心思想是通过java.lang.reflect.Proxy类和InvocationHandler接口，为实现了接口的目标对象生成代理对象。代理类与目标类实现相同接口，只能代理有接口的类。[coding](https://github.com/wxcoding/design-pattern/tree/master/src/main/java/com/guanwx/creational/builder)
     * Cglib：基于继承的动态代理，核心思想是通过 ASM 字节码框架动态生成目标类的子类作为代理类，无需目标类实现接口。可代理任意类，但无法代理 final 类 / 方法。[coding](https://github.com/wxcoding/design-pattern/tree/master/src/main/java/com/guanwx/creational/builder)
-## 行为型模式（behavioral）- 11:
+## 行为型模式（behavioral）- 11个:
 * 模板方法模式（template method）：核心思想是在抽象类中定义算法的骨架（固定步骤），将算法中可变的步骤延迟到子类实现。保证算法整体流程不变，细节可灵活定制，如 Spring 的JdbcTemplate固定数据库操作流程，开放 SQL 执行、结果映射等可变步骤。[coding](https://github.com/wxcoding/design-pattern/tree/master/src/main/java/com/guanwx/creational/builder)
 * 命令模式（command）：核心思想是将请求封装为独立的命令对象，使请求的发送者（调用者）与接收者（执行者）解耦。命令对象封装 “做什么” 和 “谁去做”，支持请求的排队、撤销、记录等操作，如遥控器按键对应命令对象，控制不同家电的操作。[coding](https://github.com/wxcoding/design-pattern/tree/master/src/main/java/com/guanwx/creational/builder)
 * 迭代器模式（iterator）：核心思想是提供一种统一的方式顺序访问聚合对象的元素，而不暴露聚合对象的内部结构。将遍历逻辑从聚合对象中抽离，客户端通过迭代器接口遍历 List、Set 等不同结构的集合，无需关注底层实现。[coding](https://github.com/wxcoding/design-pattern/tree/master/src/main/java/com/guanwx/creational/builder)
