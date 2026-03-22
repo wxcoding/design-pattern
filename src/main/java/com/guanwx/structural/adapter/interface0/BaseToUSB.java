@@ -1,4 +1,4 @@
-package com.guanwx.structural.adapter;
+package com.guanwx.structural.adapter.interface0;
 
 /**
  * @Author: guanwx
@@ -10,5 +10,7 @@ package com.guanwx.structural.adapter;
 public interface BaseToUSB {
 
     void handlerRequest();
+
+    void method2();
 
 }

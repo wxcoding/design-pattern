@@ -1,4 +1,4 @@
-package com.guanwx.structural.adapter;
+package com.guanwx.structural.adapter.class0;
 
 /**
  * @Author: guanwx
@@ -14,7 +14,7 @@ public class Computer {
     }
 
     public static void main(String[] args) {
-        new Computer().net(new Adapter(new BaseAdapter()));
+        new Computer().net(new Adapter());
     }
 
 }

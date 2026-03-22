@@ -1,4 +1,4 @@
-package com.guanwx.structural.adapter;
+package com.guanwx.structural.adapter.object0;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
