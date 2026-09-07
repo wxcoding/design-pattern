@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 public class TestController {
 
     @GetMapping("/test1/{test}")
-    public String test1 (@PathVariable("test") String test) {
+    public String test1 (@PathVariable String test) {
         System.out.println(test);
         return test;
     }
