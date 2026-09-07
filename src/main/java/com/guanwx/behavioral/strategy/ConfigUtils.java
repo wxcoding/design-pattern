@@ -17,6 +17,7 @@ public class ConfigUtils {
     static {
         map.put("msgSender", new MsgSender());
         map.put("mailSender",new MailSender());
+        map.put("QQSender",new QQSender());
     }
 
     public static <T> T getBean(String name, Class<T> tClass) {
